@@ -1,0 +1,81 @@
+.prettyprint {
+    background-color: #EFEFEF;
+    border: 1px solid #BBB;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08) inset, 1px 1px 0 #FFF;
+    color: #000;
+    overflow-x: auto;
+    position: relative;
+    text-shadow: none;
+}
+
+.prettyprint:before {
+    color: rgba(0, 0, 0, 0.05);
+    cursor: default;
+    font: bold 4em/1em "Helvetica", "Arial", sans-serif;
+    position: absolute;
+    right: 0.25em;
+    top: 0.25em;
+}
+
+.prettyprint code {
+    display: block;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow-x: auto;
+    padding: 1em;
+    width: 100%;
+}
+
+.language-html:before {
+    content: "HTML";
+}
+
+.language-css:before {
+    content: "CSS";
+}
+
+.language-js:before {
+    content: "JavaScript";
+}
+
+.language-php:before {
+    content: "PHP";
+}
+
+/* plain */
+.pln{color:#000;}
+
+/* string */
+.str{color:#080;}
+
+/* keyword */
+.kwd{color:#008;}
+
+/* comment */
+.com{color:#800;}
+
+/* type */
+.typ{color:#606;}
+
+/* literal */
+.lit{color:#066;}
+
+/* punctuation, lisp open bracket, lisp close bracket */
+.pun,.opn,.clo{color:#660;}
+
+/* tag */
+.tag{color:#008;}
+
+/* attribute name */
+.atn{color:#606;}
+
+/* attribute value */
+.atv{color:#080;}
+
+/* declaration, variable */
+.dec,.var{color:#606;}
+
+/* function */
+.fun{color:#F00;}
