@@ -1,0 +1,88 @@
+[role="banner"] {
+    background-color: #FEFEFE;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
+    display: table;
+    max-width: 950px;
+    padding: 1% -webkit-calc((100% - 950px) / 2) 2%;
+    padding: 1%    -moz-calc((100% - 950px) / 2) 2%;
+    padding: 1%         calc((100% - 950px) / 2) 2%;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 3; /* ((role="banner") = z-index:3;) > ((role="main") = z-index:2;) > ((role="contentinfo") = z-index:1;) */
+}
+
+[role="banner"] [role="navigation"],
+[role="banner"] hgroup {
+    display: table-cell;
+    padding-right: 1em;
+    vertical-align: top;
+    width: -webkit-calc(700px - 1em);
+    width:    -moz-calc(700px - 1em);
+    width:         calc(700px - 1em);
+}
+
+[role="banner"] [role="navigation"] {
+    font-size: 1.6em;
+    padding-top: 3.9375em;
+    padding-right: 0;
+    width: 250px;
+}
+
+[role="banner"] hgroup h1 {
+    font-size: 5.6em;
+    margin-bottom: 0.178571429em; /* 10px */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+[role="banner"] hgroup h1 a {
+    color: #9F9F9F;
+    text-decoration: none;
+    -webkit-transition: color 300ms linear 0ms;
+       -moz-transition: color 300ms linear 0ms;
+            transition: color 300ms linear 0ms;
+}
+
+[role="banner"] hgroup h1 a:hover {
+    color: #7F7F7F;
+}
+[role="banner"] hgroup h1 a .upper-case {
+    color: #666;
+}
+
+[role="banner"] hgroup h2 {
+    color: #555;
+    font-weight: normal;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    margin-left: 1em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+[role="banner"] nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+[role="banner"] nav ul li {
+    display: table-cell;
+}
+
+[role="banner"] nav ul li:nth-of-type(2) {
+    text-align: center;
+    width: 100%;
+}
+
+[role="banner"] nav ul li a {
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-transition: border-color 500ms ease 0ms;
+       -moz-transition: border-color 500ms ease 0ms;
+            transition: border-color 500ms ease 0ms;
+}
+
+[role="banner"] nav ul li a:hover {
+    border-color: #000;
+    color: #000;
+}
