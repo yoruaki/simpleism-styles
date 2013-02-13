@@ -1,0 +1,22 @@
+[role="main"] .section-wrapper hgroup {
+    margin-bottom: 1em;
+}
+
+[role="main"] .section-wrapper #link dl dt,
+[role="main"] .section-wrapper #link dl dd {
+    overflow: hidden;
+}
+
+[role="main"] .section-wrapper #link dl dt:nth-of-type(2n-1),
+[role="main"] .section-wrapper #link dl dd:nth-of-type(2n-1) {
+    float: left;
+    width: 50%;
+}
+
+[role="main"] .section-wrapper #link dl dd {
+    margin: 0 0 3em 1em;
+}
+
+[role="main"] .section-wrapper #link dl dd span {
+    font-weight: bold;
+}
