@@ -1,239 +1,218 @@
-[role="main"] .article-wrapper .archive-info {
+@mixin border-box {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-    width: 100%;
 }
 
-[role="main"] .article-wrapper .archive-info dl {
-    font-size: 1.60714286em; /* 22.5px */
-    margin: 0 0 2%;
-}
+[role="main"] {
+    .article-wrapper {
 
-[role="main"] .article-wrapper .archive-info dl:after {
-    background-color: #C1C1C1;
-    border-bottom: 1px solid #FFF;
-    content: "";
-    display: block;
-    height: 1px;
-    margin-top: 2%;
-}
+        //archive-info
+        .archive-info {
+            @include border-box;
+            width: 100%;
+            dl {
+                font-size: 1.60714286em; /* 22.5px */
+                margin: 0 0 2%;
+                &:after {
+                    background-color: #C1C1C1;
+                    border-bottom: 1px solid #FFF;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    margin-top: 2%;
+                }
+                dt,
+                dd {
+                    display: table-cell;
+                }
+                dt {
+                    font-family: "Fjalla One", sans-serif;
+                    &:after {
+                        content: ":";
+                        margin-right: 0.5em;
+                    }
+                }
+            }
+            ul {
+                margin: 0 0 5%;
+                padding: 0;
+                &:after {
+                    background-color: #C1C1C1;
+                    border-bottom: 1px solid #FFF;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    margin-top: 2%;
+                }
+                li {
+                    display: table-cell;
+                    width: 5%;
+                    &:last-of-type {
+                        text-align: right;
+                    }
+                    a {
+                        border-radius: 3px;
+                        display: block;
+                        padding: 0 1em;
+                        &:hover {
+                            background-color: #DDD;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
 
-[role="main"] .article-wrapper .archive-info dl dt,
-[role="main"] .article-wrapper .archive-info dl dd {
-    display: table-cell;
-}
+        //article
+        article {
+            letter-spacing: 1px;
+            margin-bottom: 10%;
+            h1,
+            .archive,
+            footer {
+                letter-spacing: 0;
+            }
+            .archive {
+                margin-bottom: 5%;
+                .category-info,
+                .tag-info {
+                    display: inline;
+                    margin: 0 0 0 1em;
+                    padding: 0;
+                    li {
+                        display: inline;
+                        &:after {
+                            content: ",\2002";
+                            font-size: 1.1em;
+                        }
+                    }
+                    &:before {
+                        content: "Tag:\2002";
+                        font-family: "Fjalla One",sans-serif;
+                        font-size: 1.25em;
+                    }
+                }
+                .category-info {
+                    &:before {
+                        content: "Category:\2002";
+                    }
+                    &:after {
+                        content: none;
+                    }
+                }
+                .tag-info {
+                    li {
+                        &:last-of-type:after {
+                            content: none;
+                        }
+                    }
+                }
+            }
 
-[role="main"] .article-wrapper .archive-info dl dt {
-    font-family: "Fjalla One", sans-serif;
-}
+            //footer
+            footer {
+                margin: 5% 0 0;
+                &:before {
+                    background-color: #C1C1C1;
+                    border-bottom: 1px solid #FFF;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    margin: 0 0 2%;
+                }
+                time {
+                    display: table-cell;
+                    font-family: "Fjalla One", sans-serif;
+                    font-size: 1.25em;
+                    width: 100%;
+                }
+                aside {
+                    display: table-cell;
+                    .social {
+                        ul {
+                            display: table;
+                            margin: 0;
+                            padding: 0;
+                            li {
+                                display: table-cell;
+                                padding-right: 3px;
+                                &:last-of-type {
+                                    padding-right: 0;
+                                }
+                                a,
+                                .count {
+                                    background-color: #000;
+                                    border-radius: 3px;
+                                    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+                                    color: #FFF;
+                                    display: block;
+                                    font: bold 0.928571429em/31px "Helvetica", "Arial", sans-serif;
+                                    height: 30px;
+                                    position: relative;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    text-shadow: none;
+                                    width: 30px;
+                                }
+                                .count {
+                                    background-color: #DADADA;
+                                    box-shadow: none;
+                                    color: inherit;
+                                    font-size: 0.846154em; /* 12px */
+                                    position: static;
+                                    text-shadow: inherit;
+                                }
+                            }
+                            .twitter {
+                                a {
+                                    &:hover {
+                                        background-color: #5BD6FD;
+                                    }
+                                }
+                            }
+                            .facebook {
+                                a {
+                                    &:hover {
+                                        background-color: #3B5998;
+                                    }
+                                }
+                            }
+                            .hatena {
+                                a {
+                                    &:hover {
+                                        background-image:     -webkit-gradient(linear, left top, left bottom, from(#568BCA), color-stop(0.5, #568BCA), color-stop(0.5, #2C6EBD));
+                                        background-image: -moz-linear-gradient(to bottom, #568BCA 50%, #2C6EBD 50%);
+                                        background-image:      linear-gradient(to bottom, #568BCA 50%, #2C6EBD 50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-[role="main"] .article-wrapper .archive-info dl dt:after {
-    content: ":";
-    margin-right: 0.5em;
-}
-
-[role="main"] .article-wrapper .archive-info ul {
-    margin: 0 0 5%;
-    padding: 0;
-}
-
-[role="main"] .article-wrapper .archive-info ul:after {
-    background-color: #C1C1C1;
-    border-bottom: 1px solid #FFF;
-    content: "";
-    display: block;
-    height: 1px;
-    margin-top: 2%;
-}
-
-[role="main"] .article-wrapper .archive-info ul li {
-    display: table-cell;
-    width: 5%;
-}
-
-[role="main"] .article-wrapper .archive-info ul li:last-of-type {
-    text-align: right;
-}
-
-[role="main"] .article-wrapper .archive-info ul li a {
-    border-radius: 3px;
-    display: block;
-    padding: 0 1em;
-}
-
-[role="main"] .article-wrapper .archive-info ul li a:hover {
-    background-color: #DDD;
-    color: #000;
-}
-
-
-
-/* -----------------------------------------------
-[role="main"] > article
------------------------------------------------ */
-[role="main"] .article-wrapper article {
-    margin-bottom: 10%;
-}
-
-[role="main"] .article-wrapper article {
-    letter-spacing: 1px;
-}
-
-[role="main"] .article-wrapper article h1,
-[role="main"] .article-wrapper article .archive,
-[role="main"] .article-wrapper article footer {
-    letter-spacing: 0;
-}
-
-[role="main"] .article-wrapper article .archive {
-    margin-bottom: 5%;
-}
-
-[role="main"] .article-wrapper article .archive .category-info,
-[role="main"] .article-wrapper article .archive .tag-info {
-    display: inline;
-    margin: 0 0 0 1em;
-    padding: 0;
-}
-
-[role="main"] .article-wrapper article .archive .category-info:before,
-[role="main"] .article-wrapper article .archive .tag-info:before {
-    content: "Tag:\2002";
-    font-family: "Fjalla One",sans-serif;
-    font-size: 1.25em;
-}
-
-[role="main"] .article-wrapper article .archive .category-info:before {
-    content: "Category:\2002";
-}
-
-[role="main"] .article-wrapper article .archive .category-info li,
-[role="main"] .article-wrapper article .archive .tag-info li {
-    display: inline;
-}
-
-[role="main"] .article-wrapper article .archive .category-info li:after,
-[role="main"] .article-wrapper article .archive .tag-info li:after {
-    content: ",\2002";
-    font-size: 1.1em;
-}
-
-[role="main"] .article-wrapper article .archive .category-info li:after,
-[role="main"] .article-wrapper article .archive .tag-info li:last-of-type:after {
-    content: none;
-}
-
-
-
-/* -----------------------------------------------
-[role="main"] > article > footer
------------------------------------------------ */
-[role="main"] .article-wrapper article footer {
-    margin: 5% 0 0;
-}
-
-[role="main"] .article-wrapper article footer:before {
-    background-color: #C1C1C1;
-    border-bottom: 1px solid #FFF;
-    content: "";
-    display: block;
-    height: 1px;
-    margin: 0 0 2%;
-}
-
-[role="main"] .article-wrapper article footer time {
-    display: table-cell;
-    font-family: "Fjalla One", sans-serif;
-    font-size: 1.25em;
-    width: 100%;
-}
-
-[role="main"] .article-wrapper article footer aside {
-    display: table-cell;
-}
-
-[role="main"] .article-wrapper article footer aside .social ul {
-    display: table;
-    margin: 0;
-    padding: 0;
-}
-
-[role="main"] .article-wrapper article footer aside .social ul li {
-    display: table-cell;
-    padding-right: 3px;
-}
-
-[role="main"] .article-wrapper article footer aside .social ul li:last-of-type {
-    padding-right: 0;
-}
-
-[role="main"] .article-wrapper article footer aside .social ul li a,
-[role="main"] .article-wrapper article footer aside .social ul li .count {
-    background-color: #000;
-    border-radius: 3px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-    color: #FFF;
-    display: block;
-    font: bold 0.928571429em/31px "Helvetica", "Arial", sans-serif;
-    height: 30px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: none;
-    width: 30px;
-}
-
-[role="main"] .article-wrapper article footer aside .social ul .twitter a:hover {
-    background-color: #5BD6FD;
-}
-
-[role="main"] .article-wrapper article footer aside .social ul .facebook a:hover {
-    background-color: #3B5998;
-}
-
-[role="main"] .article-wrapper article footer aside .social ul .hatena a:hover {
-    background-image:     -webkit-gradient(linear, left top, left bottom, from(#568BCA), color-stop(0.5, #568BCA), color-stop(0.5, #2C6EBD));
-    background-image: -moz-linear-gradient(to bottom, #568BCA 50%, #2C6EBD 50%);
-    background-image:      linear-gradient(to bottom, #568BCA 50%, #2C6EBD 50%);
-}
-
-[role="main"] .article-wrapper article footer aside .social ul li .count {
-    background-color: #DADADA;
-    box-shadow: none;
-    color: inherit;
-    font-size: 0.846154em; /* 12px */
-    position: static;
-    text-shadow: inherit;
-}
-
-
-
-/* -----------------------------------------------
-[role="main"] > adsense
------------------------------------------------ */
-[role="main"] .article-wrapper .adsense-wrapper {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    margin-bottom: 10%;
-}
-
-[role="main"] .article-wrapper .adsense-wrapper:before,
-[role="main"] .article-wrapper .adsense-wrapper:after {
-    background-color: #C1C1C1;
-    border-bottom: 1px solid #FFF;
-    content: "";
-    display: block;
-    height: 1px;
-}
-
-[role="main"] .article-wrapper .adsense-wrapper:last-child {
-    margin-bottom: 0;
-}
-
-[role="main"] .article-wrapper .adsense {
-    height: 60px;
-    width: 468px;
-    margin: 5% auto;
+        //adsense
+        .adsense-wrapper {
+            margin-bottom: 10%;
+            @include border-box;
+            &:before,
+            &:after {
+                background-color: #C1C1C1;
+                border-bottom: 1px solid #FFF;
+                content: "";
+                display: block;
+                height: 1px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .adsense {
+            height: 60px;
+            width: 468px;
+            margin: 5% auto;
+        }
+    }
 }
