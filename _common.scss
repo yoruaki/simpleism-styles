@@ -37,68 +37,59 @@ figure {
     letter-spacing: 1px;
     margin: 1em 0;
     text-shadow: none;
-}
-
-figure blockquote {
-    margin: 0 0 1em;
-    padding: 1em 1em 0 4em;
-    position: relative;
-}
-
-figure blockquote:before {
-    color: rgba(0, 0, 0, 0.05);
-    content: "\201C";
-    cursor: default;
-    font: bold 8em/1em "Helvetica", "Arial", sans-serif;
-    left: 0;
-    position: absolute;
-    top: -0.0833333333em; /* 8px */
-}
-
-figure blockquote *:last-child {
-    margin-bottom: 0;
-}
-
-figure blockquote + figcaption {
-    margin: 0 1em 1em 4em;
-    text-align: right;
-}
-
-figure blockquote + figcaption:before {
-    background-color: #CCC;
-    border-bottom: 1px solid #FFF;
-    content: "";
-    display: block;
-    height: 1px;
-    margin: 1em 0 0.6em;
-}
-
-figure blockquote + figcaption cite:before,
-figure blockquote + figcaption cite,
-figure blockquote + figcaption cite a {
-    font-size: 0.9em;
-    font-style: normal;
-}
-
-figure blockquote + figcaption cite:before {
-    content: "via: ";
+    blockquote {
+        margin: 0 0 1em;
+        padding: 1em 1em 0 4em;
+        position: relative;
+        &:before {
+            color: rgba(0, 0, 0, 0.05);
+            content: "\201C";
+            cursor: default;
+            font: bold 8em/1em "Helvetica", "Arial", sans-serif;
+            left: 0;
+            position: absolute;
+            top: -0.0833333333em; /* 8px */
+        }
+        *:last-child {
+            margin-bottom: 0;
+        }
+        & + figcaption {
+            margin: 0 1em 1em 4em;
+            text-align: right;
+            &:before {
+                background-color: #CCC;
+                border-bottom: 1px solid #FFF;
+                content: "";
+                display: block;
+                height: 1px;
+                margin: 1em 0 0.6em;
+            }
+            cite:before,
+            cite,
+            cite a {
+                font-size: 0.9em;
+                font-style: normal;
+            }
+            cite:before {
+                content: "via: ";
+            }
+        }
+    }
 }
 
 ins {
     display: block;
     margin-top: 10%;
     text-decoration: none;
-}
-
-ins h2 {
-    font-size: 1.75em;
-    font-weight: normal;
-}
-
-ins h2:after {
-    background-color: #C1C1C1;
-    border-bottom: 1px solid #FFF;
-    content: "";
-    display: block;
-    height: 1px;
+     h2 {
+        font-size: 1.75em;
+        font-weight: normal;
+        &:after {
+            background-color: #C1C1C1;
+            border-bottom: 1px solid #FFF;
+            content: "";
+            display: block;
+            height: 1px;
+        }
+    }
 }
