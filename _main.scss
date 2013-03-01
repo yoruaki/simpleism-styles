@@ -14,8 +14,17 @@
     h1 {
         font-size: 2.5em;
         font-weight: normal;
-        line-height: 1;
+        line-height: 1em;
         margin-bottom: 0.25em;
+    }
+    h2,
+    h3 {
+        font-size: 1.75em;
+        line-height: 1em;
+        margin-bottom: 0.5em;
+    }
+    h3 {
+        font-size: 1.5em;
     }
     .article-wrapper,
     .section-wrapper,
