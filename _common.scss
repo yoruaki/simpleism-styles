@@ -84,8 +84,8 @@ ins {
     margin-top: 10%;
     text-decoration: none;
      h2 {
-        font-size: 1.75em;
         font-weight: normal;
+        line-height: 1.5em !important;
         &:after {
             background-color: #C1C1C1;
             border-bottom: 1px solid #FFF;
@@ -94,4 +94,32 @@ ins {
             height: 1px;
         }
     }
+}
+
+table,
+tr,
+th,
+td {
+    background-color: #E6E6E6;
+    border: solid 1px #BBB;
+    border-collapse: collapse;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 0 #FFF, 1px 1px 0px #FFF;
+    line-height: 2.35714286em; /* 33px */
+    padding: 0 5px;
+}
+
+table {
+    box-shadow: none;
+    color: #000;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+th {
+    background-color: #E1E1E1;
+}
+
+td:hover {
+    background: #E3E3E3;
 }
