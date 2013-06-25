@@ -1,7 +1,6 @@
 [role="banner"] {
     background-color: #FEFEFE;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
-    display: table;
     max-width: 950px;
     padding: 1% -webkit-calc((100% - 950px) / 2) 2%;
     padding: 1%    -moz-calc((100% - 950px) / 2) 2%;
@@ -21,8 +20,8 @@
     }
     [role="navigation"] {
         font-size: 1.6em;
-        padding-top: 3.9375em;
         padding-right: 0;
+        vertical-align: bottom;
         width: 250px;
     }
     hgroup {
