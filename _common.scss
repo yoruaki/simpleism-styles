@@ -100,3 +100,31 @@ ins {
         }
     }
 }
+
+table,
+tr,
+th,
+td {
+    background-color: #E6E6E6;
+    border: solid 1px #BBB;
+    border-collapse: collapse;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 0 #FFF, 1px 1px 0px #FFF;
+    line-height: 2.35714286em; /* 33px */
+    padding: 0 5px;
+}
+
+table {
+    box-shadow: none;
+    color: #000;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+th {
+    background-color: #E1E1E1;
+}
+
+td:hover {
+    background: #E3E3E3;
+}
