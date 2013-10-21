@@ -1,5 +1,5 @@
 body {
-    color: #333;
+    color: #000;
     font: 62.5%/1 "Open Sans", sans-serif; /* 62.5% = 10px */
     margin: 0;
 }
@@ -19,14 +19,14 @@ h3 {
     padding: 0;
 }
 
-
-
 p {
     margin: 0 0 1em;
 }
 
-code {
+code,
+var {
     font-family: "Menlo", "Consolas", monospace;
+    font-style: normal;
 }
 
 *:not(pre) > code {
@@ -112,11 +112,11 @@ td {
     box-shadow: inset 1px 1px 0 #FFF, 1px 1px 0px #FFF;
     line-height: 2.35714286em; /* 33px */
     padding: 0 5px;
+    vertical-align: top;
 }
 
 table {
     box-shadow: none;
-    color: #000;
     margin: 0 0 1em;
     width: 100%;
 }
@@ -127,4 +127,25 @@ th {
 
 td:hover {
     background: #E3E3E3;
+}
+
+dl {
+    line-height: 1.2;
+    margin: 1em 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 0.5em 1em;
+}
+
+dd:last-of-type {
+    margin-bottom: 0;
+}
+
+dd dl:first-of-type {
+    margin-top: 0;
 }
